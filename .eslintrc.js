@@ -20,6 +20,7 @@ module.exports = {
         "@typescript-eslint"
     ],
     "rules": {
-        "react/prop-types": ['off'],
+        '@typescript-eslint/no-var-requires': 0,
+        'react/prop-types': ['off'],
     }
 }
