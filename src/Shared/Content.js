@@ -1,14 +1,16 @@
-import React from "react";
+import React from 'react';
 import {AppContext} from "../App/AppProvider";
 
-// eslint-disable-next-line react/display-name
 export default function(props){
-    return <AppContext.Consumer>
-        {({coinList}) => {
-            if(!coinList){
-                return <div> Loading Coins</div>
-            }
-            return <div> {props.children} </div>
-        }}
-    </AppContext.Consumer>
+  return <AppContext.Consumer>
+    {({coinList, prices, firstVisit}) => {
+      if(!coinList){
+        return <div> Loading Coins </div>
+      }
+      if(!firstVisit && !prices){
+        return <div> Loading Prices </div>
+      }
+      return <div> {props.children} </div>
+    }}
+  </AppContext.Consumer>
 }

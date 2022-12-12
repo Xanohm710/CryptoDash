@@ -1,6 +1,6 @@
-import React from "react";
-import { AppContext } from "../App/AppProvider"
-// eslint-disable-next-line react/display-name
+import React from 'react';
+import {AppContext} from "../App/AppProvider";
+
 export default function ({firstVisit}) {
   return (
     <AppContext.Consumer>
@@ -11,4 +11,4 @@ export default function ({firstVisit}) {
       }
     </AppContext.Consumer>
   );
-}
+};
