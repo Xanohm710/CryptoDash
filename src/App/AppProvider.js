@@ -1,5 +1,5 @@
 import React from "react";
-/* eslint @typescript-eslint/no-var-requires: "off" */
+
 const cc = require('cryptocompare');
 
 export const AppContext = React.createContext();
@@ -9,6 +9,7 @@ export class AppProvider extends React.Component {
         super(props);
         this.state = {
             page: 'dashboard',
+            favorites: ['ETH', 'BTC', 'XMR', 'DOGE'],
             ...this.savedSettings(),
             setPage: this.setPage,
             confirmFavorites: this.confirmFavorites
