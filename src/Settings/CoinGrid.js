@@ -10,7 +10,7 @@ export const CoinGridStyled = styled.div`
   margin-top: 40px; 
 `
 
-function getLowerSectionCoins(coinList, filteredCoins){
+function getLowerSectionCoins(coinList, filteredCoins){ 
   return (filteredCoins && Object.keys(filteredCoins)) ||
     Object.keys(coinList).slice(0, 100)
 }

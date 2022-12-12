@@ -11,7 +11,7 @@ export const SelectableTile = styled(Tile)`
   &:hover {
     cursor: pointer; 
     ${greenBoxShadow}
-  }
+  } 
 `
 
 export const DeletableTile = styled(SelectableTile)`
